@@ -1,0 +1,92 @@
+{
+  "version": "2.0",
+  "pipeline_stage": "validated",
+  "authors": {
+    "David Rozado": {},
+    "Andreas Duenser": {},
+    "Ben Howell": {}
+  },
+  "related_identifiers": [
+    {
+      "identifier": "10.1371/journal.pone.0121262",
+      "identifier_type": "DOI",
+      "relation_type": "IsDerivedFrom"
+    },
+    {
+      "identifier": "10.7910/DVN/28932",
+      "identifier_type": "DOI",
+      "relation_type": "References"
+    },
+    {
+      "identifier": "https://github.com/nemarDatasets/nm000148",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "https://nemar.org/dataset/nm000148",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "10.21105/joss.01896",
+      "identifier_type": "DOI",
+      "relation_type": "References"
+    },
+    {
+      "identifier": "10.1038/s41597-019-0104-8",
+      "identifier_type": "DOI",
+      "relation_type": "References"
+    }
+  ],
+  "title": "Motor imagery BCI dataset with pupillometry augmentation",
+  "license": "CC0 1.0",
+  "dataset_type": "derivative",
+  "resource_type_general": "Dataset",
+  "modalities": [
+    "eeg"
+  ],
+  "resource_type_specific": "EEG Dataset",
+  "sizes": [
+    "3.5 GB (123 files)"
+  ],
+  "formats": [
+    ".bdf",
+    ".html",
+    ".json",
+    ".md",
+    ".tsv",
+    ".xdf",
+    ".yaml",
+    ".yml"
+  ],
+  "description": "A motor imagery brain-computer interface dataset comprising EEG recordings from 30 healthy subjects performing left-hand grasping imagery and rest tasks, augmented with pupillometry measurements. The dataset includes 32-channel EEG data sampled at 512 Hz acquired using BioSemi ActiveTwo hardware, with synchronized pupil diameter measurements to investigate the relationship between task-evoked pupillary responses and motor imagery performance.",
+  "methods_description": "EEG data were acquired from 30 healthy subjects using a 32-channel BioSemi ActiveTwo system (biosemi32 montage) at 512 Hz sampling rate with CMS/DRL reference. Subjects performed two sessions of motor imagery tasks (left-hand grasping vs. rest) cued by auditory stimuli, with each session containing 2 blocks of 25 trials each (6-second trial duration). Pupil diameter was recorded simultaneously to augment the EEG-based BCI. Data were processed using Common Spatial Patterns (CSP) for feature extraction and Linear Discriminant Analysis (LDA) for classification, with 10-fold cross-validation for evaluation.",
+  "keywords": [
+    {
+      "term": "motor imagery"
+    },
+    {
+      "term": "Brain-Computer Interfaces",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D062207"
+    },
+    {
+      "term": "EEG"
+    },
+    {
+      "term": "pupillometry"
+    },
+    {
+      "term": "Electroencephalography",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
+    },
+    {
+      "term": "BCI"
+    },
+    {
+      "term": "pupil diameter"
+    }
+  ],
+  "source_hash": "7853eb686dcfa6fc92a57b3b7072f2b9eb1c5ffdb7fcc060afb28be644bbe213"
+}

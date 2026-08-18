@@ -1,11 +1,43 @@
 {
   "version": "2.0",
   "pipeline_stage": "validated",
+  "title": "Motor imagery BCI dataset with pupillometry augmentation",
+  "description": "A motor imagery brain-computer interface dataset comprising EEG recordings from 30 healthy participants performing left-hand grasping imagery and rest tasks, augmented with pupillometry measurements. The dataset includes 32-channel EEG data acquired at 512 Hz using BioSemi ActiveTwo hardware, with two experimental runs per subject containing 50 trials total. This derivative dataset was processed using the Mother of All BCI Benchmarks (MOABB) framework and is designed to support BCI research and benchmarking studies.",
+  "methods_description": "EEG data were acquired from 30 healthy participants using a 32-channel BioSemi ActiveTwo system (biosemi32 montage) sampled at 512 Hz with CMS/DRL reference. Participants performed motor imagery tasks involving left-hand grasping imagery versus rest, cued by auditory stimuli in a synchronous, offline paradigm. Each trial lasted 6 seconds, with 2 experimental blocks of 25 trials each per subject. Pupillometry measurements were recorded concurrently. Signal processing included bandpass filtering (8-30 Hz), Common Spatial Pattern (CSP) feature extraction, and Linear Discriminant Analysis (LDA) classification with 10-fold cross-validation.",
+  "license": "CC0 1.0",
+  "dataset_type": "derivative",
   "authors": {
     "David Rozado": {},
     "Andreas Duenser": {},
     "Ben Howell": {}
   },
+  "keywords": [
+    {
+      "term": "motor imagery"
+    },
+    {
+      "term": "Brain-Computer Interfaces",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D062207"
+    },
+    {
+      "term": "EEG"
+    },
+    {
+      "term": "pupillometry"
+    },
+    {
+      "term": "Electroencephalography",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
+    },
+    {
+      "term": "feature extraction"
+    },
+    {
+      "term": "classification"
+    }
+  ],
   "related_identifiers": [
     {
       "identifier": "10.1371/journal.pone.0121262",
@@ -38,14 +70,11 @@
       "relation_type": "References"
     }
   ],
-  "title": "Motor imagery BCI dataset with pupillometry augmentation",
-  "license": "CC0 1.0",
-  "dataset_type": "derivative",
   "resource_type_general": "Dataset",
+  "resource_type_specific": "EEG Dataset",
   "modalities": [
     "eeg"
   ],
-  "resource_type_specific": "EEG Dataset",
   "sizes": [
     "3.5 GB (123 files)"
   ],
@@ -59,34 +88,5 @@
     ".yaml",
     ".yml"
   ],
-  "description": "A motor imagery brain-computer interface dataset comprising EEG recordings from 30 healthy subjects performing left-hand grasping imagery and rest tasks, augmented with pupillometry measurements. The dataset includes 32-channel EEG data sampled at 512 Hz acquired using BioSemi ActiveTwo hardware, with synchronized pupil diameter measurements to investigate the relationship between task-evoked pupillary responses and motor imagery performance.",
-  "methods_description": "EEG data were acquired from 30 healthy subjects using a 32-channel BioSemi ActiveTwo system (biosemi32 montage) at 512 Hz sampling rate with CMS/DRL reference. Subjects performed two sessions of motor imagery tasks (left-hand grasping vs. rest) cued by auditory stimuli, with each session containing 2 blocks of 25 trials each (6-second trial duration). Pupil diameter was recorded simultaneously to augment the EEG-based BCI. Data were processed using Common Spatial Patterns (CSP) for feature extraction and Linear Discriminant Analysis (LDA) for classification, with 10-fold cross-validation for evaluation.",
-  "keywords": [
-    {
-      "term": "motor imagery"
-    },
-    {
-      "term": "Brain-Computer Interfaces",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D062207"
-    },
-    {
-      "term": "EEG"
-    },
-    {
-      "term": "pupillometry"
-    },
-    {
-      "term": "Electroencephalography",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
-    },
-    {
-      "term": "BCI"
-    },
-    {
-      "term": "pupil diameter"
-    }
-  ],
-  "source_hash": "7853eb686dcfa6fc92a57b3b7072f2b9eb1c5ffdb7fcc060afb28be644bbe213"
+  "source_hash": "7b65a4823258f78c69681e370ea82603f89d453e24f7c6cdc18aa466a9915c84"
 }

@@ -15,7 +15,6 @@ acquisition:
   hardware: BioSemi ActiveTwo
   line_freq: 50.0
   montage: biosemi32
-  n_channels: 32
   reference: CMS/DRL
   sampling_rate: 512.0
   sensor_type: active
@@ -29,6 +28,7 @@ cross_validation:
 data_structure:
   block_duration_s: 300.0
   n_blocks: 2
+  n_trials: 50
   trials_context: 2 experiments of 25 trials each (50 trials total per subject). Each experiment is stored as one XDF file.
 documentation:
   country: AU

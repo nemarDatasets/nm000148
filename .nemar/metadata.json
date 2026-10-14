@@ -1,9 +1,9 @@
 {
   "version": "2.0",
-  "pipeline_stage": "enriched",
+  "pipeline_stage": "validated",
   "title": "Motor imagery BCI dataset with pupillometry augmentation",
-  "description": "EEG recordings from 30 healthy participants performing a left-hand grasping motor imagery task versus rest, cued by auditory stimuli, with simultaneous pupillometry. The dataset was recorded with a 32-channel BioSemi ActiveTwo system at 512 Hz across two runs of 25 trials per subject. It supports evaluating whether task-evoked pupil diameter changes can improve EEG-based motor imagery brain-computer interface classification.",
-  "methods_description": "32-channel EEG was recorded with a BioSemi ActiveTwo system (sintered Ag/AgCl active electrodes, CMS/DRL reference) at 512 Hz. Each participant completed two experiments of 25 trials, each 6 s long, alternating left-hand grasping imagery and rest with auditory cues. Pupil diameter was recorded alongside the EEG. Separately, the MOABB benchmark used 8-30 Hz bandpass filtering, CSP features with pupil diameter, and LDA classification with 10-fold within-subject cross-validation.",
+  "description": "EEG recordings from 30 healthy participants performing a two-class motor imagery task (left-hand grasping imagery versus rest) with simultaneous pupillometry. Data were acquired with a 32-channel BioSemi ActiveTwo system at 512 Hz, with two runs of 25 auditory-cued trials per participant. This BIDS derivative was regenerated with a corrected MOABB loader and supports evaluating whether task-evoked pupil diameter changes improve motor imagery BCI classification.",
+  "methods_description": "32-channel EEG was recorded with a BioSemi ActiveTwo system (sintered Ag/AgCl active electrodes, CMS/DRL reference) at 512 Hz. Each participant completed two experiments of 25 trials, each stored as an XDF file. Trials lasted 6 s and used auditory cues for left-hand grasping imagery versus rest. Reference analyses used 8-30 Hz bandpass filtering, CSP and pupil diameter features, and LDA classification with 10-fold within-subject cross-validation.",
   "license": "CC0 1.0",
   "dataset_type": "derivative",
   "authors": {
@@ -12,9 +12,6 @@
     "Ben Howell": {}
   },
   "keywords": [
-    {
-      "term": "EEG"
-    },
     {
       "term": "motor imagery"
     },
@@ -25,14 +22,17 @@
       "term": "pupillometry"
     },
     {
-      "term": "Brain-Computer Interfaces",
-      "subject_scheme": "MeSH",
-      "value_uri": "http://id.nlm.nih.gov/mesh/D062207"
+      "term": "EEG"
     },
     {
       "term": "Electroencephalography",
       "subject_scheme": "MeSH",
       "value_uri": "http://id.nlm.nih.gov/mesh/D004569"
+    },
+    {
+      "term": "Imagination",
+      "subject_scheme": "MeSH",
+      "value_uri": "http://id.nlm.nih.gov/mesh/D007092"
     }
   ],
   "related_identifiers": [
@@ -73,7 +73,7 @@
     "eeg"
   ],
   "sizes": [
-    "3.21 GB (123 files)"
+    "4.16 GB (185 files)"
   ],
   "formats": [
     ".bdf",
@@ -85,5 +85,5 @@
     ".yaml",
     ".yml"
   ],
-  "source_hash": "7b65a4823258f78c69681e370ea82603f89d453e24f7c6cdc18aa466a9915c84"
+  "source_hash": "b9d441751621a040ab1ae2ce092800963a84b42df3a60ea121186a09d8b8a376"
 }

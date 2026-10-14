@@ -1,0 +1,18 @@
+1.1.0 2026-10-14
+  - Regenerated all BIDS recordings with the corrected MOABB Rozado2015 loader
+    (https://github.com/NeuroTechX/moabb/pull/1260, issue
+    https://github.com/NeuroTechX/moabb/issues/1070).
+    Channel 0 of the XDF EEG stream is the trigger (Trig1). Versions up to
+    1.0.2 took the first 32 channels by position: the channel labelled Fp1
+    held the (constant) trigger, every other label was shifted by one
+    electrode (the data labelled AF3 was Fp1, ..., the data labelled Cz was
+    Fz) and Cz was missing. Channels are now picked by label. The stream's
+    declared microvolts were also scaled as raw ADC counts (x 31.25e-9
+    instead of x 1e-6), so EEG amplitudes were 32 times too small; they are
+    now scaled correctly. Sampling rate (512 Hz), events (1,550) and the list
+    of recordings are unchanged; the BAD_ACQ_SKIP annotation and the extra
+    padding second at the end of the old BDF files are gone.
+  - derivatives/neural_signatures regenerated from the corrected recordings.
+  - README regenerated from the corrected loader metadata;
+    code/Rozado2015.metadata.yaml updated.
+  - sourcedata/ unchanged.
